@@ -2,7 +2,7 @@ import React from 'react';
 import Appointment from './Appointment';
 import BAnner from './BAnner';
 import Care from './Care';
-import Footer from './Footer';
+import Footer from '../Shared/Footer';
 import Form from './Form';
 import Info from './Info';
 import Services from './Services';
@@ -10,7 +10,8 @@ import Testimonials from './Testimonials';
 
 const Home = () => {
     return (
-        <div className='px-12'>
+        // <div className='px-12'>
+        <div>
             <BAnner></BAnner>
             <Info></Info>
             <Services></Services>
