@@ -1,12 +1,25 @@
 import React from 'react';
+import Appointment from './Appointment';
 import BAnner from './BAnner';
+import Care from './Care';
+import Footer from './Footer';
+import Form from './Form';
 import Info from './Info';
+import Services from './Services';
+import Testimonials from './Testimonials';
 
 const Home = () => {
     return (
-        <div>
+        <div className='px-12'>
             <BAnner></BAnner>
             <Info></Info>
+            <Services></Services>
+            <Care></Care>
+            <Appointment></Appointment>
+            <Testimonials></Testimonials>
+            <Form></Form>
+            <Footer></Footer>
+
         </div>
     );
 };
