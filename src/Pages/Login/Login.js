@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
+
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -14,6 +15,9 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+
+
 
     let signInError;
     let navigate = useNavigate();
@@ -40,6 +44,7 @@ const Login = () => {
     const onSubmit = (data) => {
         // console.log(data); 
         signInWithEmailAndPassword(data.email, data.password);
+
     }
 
     return (
@@ -104,6 +109,7 @@ const Login = () => {
                         <input className='btn w-full max-w-xs' type="submit" value="Login" />
                     </form>
                     <p><small>New to Doctors Portal? <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
+                    {/* <span> <button className="btn btn-link text-xs">Forget Password?</button></span> */}
 
                     <div className="divider">OR</div>
                     <button onClick={() => signInWithGoogle()}
